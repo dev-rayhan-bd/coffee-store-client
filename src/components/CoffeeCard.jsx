@@ -7,7 +7,7 @@ const CoffeeCard = ({ coffee,coffees,setCoffees }) => {
    
   
       // eslint-disable-next-line react/prop-types
-  const {_id, name, quantity, supplier, taste, catagory, details, photo } = coffee;
+  const {_id, name, quantity, supplier, taste, photo } = coffee;
     const handleDelete=()=>{
         Swal.fire({
             title: 'Are you sure?',
@@ -33,6 +33,7 @@ const CoffeeCard = ({ coffee,coffees,setCoffees }) => {
                         'success',
                          
                       )
+                      // eslint-disable-next-line react/prop-types
                       const remaining = coffees.filter(coffee=>coffee._id !== _id);
                     setCoffees(remaining) 
                 }
